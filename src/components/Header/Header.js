@@ -18,10 +18,12 @@ const useStyles = makeStyles((theme) => ({
     toolbarLink: {
         textDecoration: 'none',
         color: theme.palette.primary.contrastText,
-        fontSize: '16px',
+        fontSize: '14px',
         padding: theme.spacing(2),
         marginLeft: theme.spacing(4),
         transition: '0.5s',
+        fontWeight: 'bold',
+        textTransform: 'uppercase',
         '&:hover': {
             backgroundColor: theme.palette.primary.dark
         }
