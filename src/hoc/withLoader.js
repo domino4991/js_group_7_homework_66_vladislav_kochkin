@@ -63,6 +63,7 @@ const withLoader = (WrappedComponent, axios) => {
 
         const errorDismissed = () => {
             setError(null);
+            setLoading(false);
         };
 
             return (
