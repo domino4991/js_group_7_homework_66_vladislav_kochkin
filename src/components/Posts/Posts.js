@@ -6,10 +6,6 @@ import {makeStyles} from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles((theme) => ({
-    container: {
-        maxWidth: '1170px',
-        margin: '0 auto'
-    },
     paper: {
         padding: theme.spacing(2),
         height: '100%',
@@ -30,7 +26,6 @@ const Posts = props => {
             container
             justify="space-between"
             grid-xs-auto="true"
-            className={classes.container}
             spacing={3}
         >
             <Grid container

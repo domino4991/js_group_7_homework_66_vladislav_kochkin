@@ -5,6 +5,7 @@ import withLoader from "../../hoc/withLoader";
 import {axiosBase} from "../../axiosBase";
 import Posts from "../../components/Posts/Posts";
 import Form from "../../components/UI/Form/Form";
+import Container from "@material-ui/core/Container";
 
 const MainPage = () => {
     const [posts, setPosts] = useState([]);
@@ -69,10 +70,12 @@ const MainPage = () => {
                 changed={e => onChangeNewPost(e)}
                 close={onCloseForm}
             />
-            <Posts
-                posts={posts}
-                clicked={() => setShowForm(!showForm)}
-            />
+            <Container maxWidth="lg">
+                <Posts
+                    posts={posts}
+                    clicked={() => setShowForm(!showForm)}
+                />
+            </Container>
         </Grid>
     );
 };

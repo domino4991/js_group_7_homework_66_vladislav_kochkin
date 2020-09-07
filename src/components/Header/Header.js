@@ -4,6 +4,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import {makeStyles} from "@material-ui/core/styles";
 import {NavLink} from "react-router-dom";
+import Container from "@material-ui/core/Container";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -35,16 +36,18 @@ const Header = () => {
     return (
         <>
             <AppBar position="static" className={classes.root}>
-                <Toolbar className={classes.toolbar}>
-                    <Typography variant="h6">
-                        Posts
-                    </Typography>
-                    <div>
-                        <NavLink to="/" exact className={classes.toolbarLink} activeClassName={classes.active}>Posts</NavLink>
-                        <NavLink to="/about" exact className={classes.toolbarLink} activeClassName={classes.active}>About</NavLink>
-                        <NavLink to="/contacts" exact className={classes.toolbarLink} activeClassName={classes.active}>Contacts</NavLink>
-                    </div>
-                </Toolbar>
+                <Container maxWidth="lg">
+                    <Toolbar className={classes.toolbar}>
+                        <Typography variant="h6">
+                            Posts
+                        </Typography>
+                        <div>
+                            <NavLink to="/" exact className={classes.toolbarLink} activeClassName={classes.active}>Posts</NavLink>
+                            <NavLink to="/about" exact className={classes.toolbarLink} activeClassName={classes.active}>About</NavLink>
+                            <NavLink to="/contacts" exact className={classes.toolbarLink} activeClassName={classes.active}>Contacts</NavLink>
+                        </div>
+                    </Toolbar>
+                </Container>
             </AppBar>
         </>
     );
